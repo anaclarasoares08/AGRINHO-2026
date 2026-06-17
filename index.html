@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte, Futuro Sustentável</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <div id="brightness-overlay"></div>
+
+    <div class="sakura-bg s1">🌸</div>
+    <div class="sakura-bg s2">🌸</div>
+    <div class="sakura-bg s3">🌸</div>
+    <div class="sakura-bg s4">🌸</div>
+
+    <header>
+        <div class="accessibility-bar">
+            <button onclick="alterarFonte(1)" title="Aumentar Letra">A+</button>
+            <button onclick="alterarFonte(-1)" title="Diminuir Letra">A-</button>
+            
+            <button onclick="alterarBrilho(0.1)" title="Aumentar Brilho">☀️ +</button>
+            <button onclick="alterarBrilho(-0.1)" title="Diminuir Brilho">☀️ -</button>
+            
+            <select id="daltonismo-select" onchange="mudarDaltonismo()">
+                <option value="normal">Visão Normal</option>
+                <option value="protanopia">Protanopia (Sem Vermelho)</option>
+                <option value="deuteranopia">Deuteranopia (Sem Verde)</option>
+                <option value="tritanopia">Tritanopia (Sem Azul)</option>
+                <option value="acromatopsia">Acromatopsia (Monocromático)</option>
+            </select>
+        </div>
+        <h1>Agro Forte, Futuro Sustentável</h1>
+        <p class="subtitle">A harmonia entre a produtividade e o respeito à terra</p>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>O Poder do Agro Sustentável</h2>
+            <p>O conceito de <strong>Agro Forte</strong> não se baseia apenas no recorde de safras, mas sim na capacidade de produzir alimentos mantendo o solo vivo, os recursos hídricos puros e a biodiversidade protegida. O futuro da agricultura depende diretamente de práticas inovadoras, como o plantio direto, a rotação de culturas e o uso biológico de defensivos.</p>
+            <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=800&q=80" alt="Plantação jovem com brotos verdes sustentáveis" class="agro-img">
+        </section>
+
+        <section class="card">
+            <h2>O Impacto da Não-Sustentabilidade</h2>
+            <p>Abaixo, veja a projeção da degradação ambiental e perda de produtividade do solo ao longo dos anos caso o agronegócio ignore as práticas sustentáveis:</p>
+            
+            <div class="chart-container">
+                <canvas id="graficoDegradacao"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Cultivando um Amanhã Melhor 🌸</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
